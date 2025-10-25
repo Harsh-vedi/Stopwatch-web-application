@@ -1,0 +1,115 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle, #130f40, #000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+    width: 350px;
+}
+
+.timer-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 6px solid rgba(255,255,255,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 700;
+    box-shadow: 0 0 20px cyan;
+}
+
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px cyan; }
+    to { box-shadow: 0 0 30px cyan; }
+}
+
+.buttons button {
+    margin: 10px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, opacity 0.3s;
+    color: #fff;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+.start { background: #0fb9b1; }
+.pause { background: #f9ca24; }
+.reset { background: #e84118; }
+.lap-btn { background: #9c88ff; }
+
+.laps {
+    margin-top: 20px;
+    max-height: 180px;
+    overflow-y: auto;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.lap-item {
+    background: rgba(255,255,255,0.15);
+    padding: 6px 10px;
+    margin: 6px 0;
+    border-radius: 6px;
+    font-size: 14px;
+}
+:root {
+    --bg-primary: radial-gradient(circle, #130f40, #000);
+    --circle-glow: cyan;
+    --text-color: #fff;
+    --lap-bg: rgba(255,255,255,0.1);
+    --lap-item-bg: rgba(255,255,255,0.15);
+}
+
+.light-theme {
+    --bg-primary: linear-gradient(to right, #ffffff, #e0e0e0);
+    --circle-glow: #0fb9b1;
+    --text-color: #000;
+    --lap-bg: rgba(0,0,0,0.1);
+    --lap-item-bg: rgba(0,0,0,0.15);
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-color);
+    transition: 0.5s ease-in-out;
+}
+
+.timer-circle {
+    box-shadow: 0 0 20px var(--circle-glow);
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 6px 12px;
+    font-size: 18px;
+    background: transparent;
+    border: 2px solid var(--text-color);
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: 0.3s;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}

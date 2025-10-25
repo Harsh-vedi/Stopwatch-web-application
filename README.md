@@ -36,7 +36,7 @@ stopwatch/
 ```
 ## How to run (locally)
 
-1. Clone the repo.
+1. Clone the repo or download zip file.
 2. Open `index.html` in your browser.
 3. Use the toggle at top-right to switch themes.
 
